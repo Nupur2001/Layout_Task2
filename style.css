@@ -575,7 +575,23 @@ footer {
   font-size: 1.2rem;
   margin-left: 10rem;
 }
+@media(min-width:360px){
 
+  .card1 {
+    margin-left: -1rem;
+  }
+  .recordLink {
+    padding: 1rem;
+    top: 0;
+  }
+  .help i {
+    right: 13rem;
+    top: 65rem;
+  }
+  .card2 {
+    margin: 1rem 0rem;
+}
+}
 @media (min-width: 394px) {
   .toggle {
     top: 2rem;
