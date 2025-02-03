@@ -17,14 +17,14 @@ html {
   color: aliceblue;
 }
 
-.help i{
+.help i {
   position: fixed;
   padding: 1rem;
   background-color: rgb(47, 110, 218);
   border-radius: 50%;
-  font-size:1.5rem;
-  right: 4rem;
-  top: 25rem;
+  font-size: 1.5rem;
+  right: 20rem;
+  top: 60rem;
 }
 /* .container{
     opacity: 1;
@@ -59,6 +59,7 @@ html {
   /* overflow: scroll; */
   transition: 0.5s ease;
   transform: translateX(-105%);
+  z-index: 3000;
 }
 .slide h1 {
   font-weight: 800;
@@ -368,6 +369,10 @@ input:checked ~ .slide {
   border-radius: 1rem;
 }
 
+.cardFlex {
+  display: flex;
+  flex-wrap: wrap;
+}
 .card2 {
   /* width: 19vw; */
   padding: 1rem;
@@ -436,77 +441,178 @@ input:checked ~ .slide {
 
 .informationCard {
   border-radius: 1rem;
-  width: 20vw;
+  /* width: 20vw; */
   flex-direction: column;
   display: flex;
   background-color: rgb(0, 0, 73);
   padding: 2rem;
 }
-.card4{
+.card4 {
   padding: 1rem 2rem;
 }
-.card4 span , .card5 span{
+.card4 span,
+.card5 .color {
   color: rgb(36, 223, 36);
   font-size: 0.9rem;
 }
 
-.card4 img ,  .card5 img {
+.card4 img,
+.card5 img {
   border-radius: 1rem;
   margin-top: 1rem;
   width: 100%;
 }
-.card5Content{
+.card5Content {
   margin-top: 1rem;
 }
-.card5 h3{
+.card5 h3 {
   font-size: 1.5rem;
 }
-.card5 .goodWorks{
+.card5 .goodWorks {
   margin-top: 1rem;
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 2rem;
   display: flex;
 }
-.card5 .goodWork i{
+.card5 .goodWork i {
   color: midnightblue;
   border-radius: 50%;
   background-color: aliceblue;
-  padding: .9rem;
+  padding: 0.9rem;
   margin-right: 1rem;
   margin-bottom: 1rem;
 }
 
-footer{
-  display: flex;
-  justify-content: space-between;
-  margin: 2rem;
+.card5 .goodWork span {
+  margin-left: 1rem;
 }
-.footerRight ul{
+
+.card6Heading {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 1rem;
-  font-size: 1.2rem;
+}
+.card6 table {
+  margin-top: 1rem;
+  border-collapse: collapse;
+  width: 100%;
 }
 
-.orderCards{
+.tableHeadings {
+  display: table-row;
+  vertical-align: middle;
+  outline: 0px;
+  color: rgb(160, 174, 192);
+}
+.tableImages {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tableImages img {
+  height: 1rem;
+  width: 1rem;
+  margin-left: -0.5rem;
+
+  border-radius: 50%;
+}
+
+/* .card6 table tr{
+  border: .1rem solid rgb(160, 174, 192);
+  padding: 2rem;
+} */
+
+td,
+th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+.nameWithIcon {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.orderCards {
   margin-top: 2rem;
 }
 
-.orderCard{
+.orderCard {
   display: flex;
   flex-wrap: wrap;
   padding: 1rem;
   gap: 1rem;
 }
 
-.orderCard i{
-  margin-top: .5rem;
+.orderCard i {
+  margin-top: 0.5rem;
 }
 
-.orderCard h4{
+.orderCard h4 {
   font-size: 1.3rem;
+}
+.card7 {
+  width: 85vw;
+}
+.card7 .tickMark {
+  background-color: green;
+  padding: 0.3rem;
+  border-radius: 50%;
+}
+footer {
+  display: flex;
+  justify-content: space-between;
+  margin: 2rem;
+}
+.footerRight ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+  font-size: 1.2rem;
+  margin-left: 10rem;
+}
+
+@media (min-width: 394px) {
+  .toggle {
+    top: 2rem;
+    left: 2rem;
+  }
+
+  .recordLink {
+    padding: 1rem;
+    top: 0;
+  }
+  .card1 .card-content {
+    padding: 1rem;
+  }
+  .orderCard {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+}
+@media (max-width: 394px) {
+  .toggle {
+    top: 2rem;
+    left: 2rem;
+  }
+  .infoCard {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+  .infoCardsResult {
+    flex-direction: column;
+  }
+  .orderCard {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+  .card1 {
+    padding: 1rem;
+  }
 }
 @media (max-width: 600px) {
   .nav {
@@ -524,10 +630,32 @@ footer{
   .toggle {
     left: 3%;
   }
+  .card1 {
+    padding: 1rem;
+  }
 }
 
-@media (min-width: 2240px) {
-  .nav h3 {
-    margin-left: 7rem;
+@media (min-width: 842px) {
+  .card1 {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 1000px) and (min-width: 394px) {
+  footer {
+    margin: 0 10rem;
+    flex-direction: column;
+  }
+  footer ul li {
+    margin-left: -9rem;
+  }
+  .help i {
+    top: 65rem;
+    right: 5rem;
+  }
+  @media (min-width: 2240px) {
+    .nav h3 {
+      margin-left: 7rem;
+    }
   }
 }
